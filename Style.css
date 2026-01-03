@@ -285,11 +285,8 @@ section {
 /* =================================================
    PROJECTS
 ================================================= */
-.projects-section h2 {
-  text-align: center;
-  font-size: 2.8rem;
-  color: var(--accent-cyan);
-  margin-bottom: 4rem;
+.projects-section {
+  padding: 6rem 8vw;
 }
 
 .projects-grid {
@@ -302,22 +299,23 @@ section {
   padding: 2.2rem;
   border-radius: 18px;
   background: linear-gradient(145deg, #020617, #020617);
-  border: 1px solid var(--border-glow);
+  border: 1px solid rgba(34,211,238,0.25);
   transition: all 0.35s ease;
 }
 
 .project-card h3 {
-  color: var(--accent-cyan);
   margin-bottom: 0.8rem;
+  color: #22d3ee;
 }
 
 .project-card p {
-  color: var(--text-secondary);
+  color: #9ca3af;
+  line-height: 1.6;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 35px rgba(34, 211, 238, 0.45);
+  box-shadow: 0 0 35px rgba(34,211,238,0.45);
 }
 
 .tags {
@@ -331,28 +329,10 @@ section {
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
   font-size: 0.75rem;
-  background: rgba(34, 211, 238, 0.15);
-  color: var(--accent-cyan);
+  background: rgba(34,211,238,0.15);
+  color: #22d3ee;
 }
 
-/* =================================================
-   CTA / CONTACT
-================================================= */
-.cta {
-  text-align: center;
-}
-
-.cta p {
-  margin: 1rem 0 2rem;
-  color: var(--text-secondary);
-}
-
-.cta-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
 
 /* =================================================
    MOBILE RESPONSIVE
