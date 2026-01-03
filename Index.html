@@ -5,22 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naveen Kumar | Data Analyst</title>
 
-  <meta name="description" content="Data Analyst portfolio showcasing dashboards, SQL analysis, and reporting automation." />
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 
   <!-- GSAP -->
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="scroll-progress"></div>
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-container">
@@ -29,25 +25,19 @@
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#work">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="Home">
+<section class=" reveal section hero" id="home">
   <div class="hero-content">
-    <h4> Hi Naveen Kummar Here an Fresher aspiring of Data Analyst</h4>
     <h1>I turn complex data<br>into clear business decisions.</h1>
-
     <p class="subtitle">
-      Data Analyst specializing in SQL, Power BI, Python, and KPI automation.
+      Data Analyst | SQL | Power BI | Python | Reporting Automation
     </p>
-
     <div class="hero-actions">
       <a href="/portfolio supporting docs/Assests/Supply Chain Project Final PPT.pptx" class="btn primary">View My Work</a>
       <a href="/portfolio supporting docs/Naveen_Kumar_Data_Analyst.pdf" class="btn secondary">Download Resume</a>
@@ -55,29 +45,49 @@
   </div>
 
   <div class="hero-visual">
-    <img src="/portfolio supporting docs/Assests/Profile.png" alt="Naveen Kumar">
-  </div>
+  <img
+    src="/portfolio supporting docs/Assests/Profile.png"
+    alt="Profile picture of Naveen Kumar"
+  />
+</div>
+
 </section>
 
-<!-- VALUE -->
-<section class="value" id="About">
-  <div class="value-grid">
-    <div class="value-card">
-      <h3>Dashboard Engineering</h3>
-      <p>KPI dashboards designed for real leadership decisions.</p>
-    </div>
-    <div class="value-card">
-      <h3>Reporting Automation</h3>
-      <p>Excel VBA, Macros, MIS & WFM reporting automation.</p>
-    </div>
-    <div class="value-card">
-      <h3>Business Analytics</h3>
-      <p>Insights that support operational and financial outcomes.</p>
-    </div>
+
+
+<!-- ABOUT -->
+<section class="reveal section about-section" id="about">
+  <div class="about-card">
+    <h2 class="about-title">👋 Hi, I’m Naveen</h2>
+    <p>
+      I am an entry-level <span>Data Analyst</span> with hands-on experience in
+      <span>SQL</span>, <span>Python</span>, <span>Power BI</span>, and <span>Excel</span>,
+      focused on KPI dashboards, reporting automation, and data-driven decision-making.
+      I am a <span>2025 Computer Science graduate</span> actively seeking
+      Data Analyst, BI Analyst, MIS Analyst, or Reporting Analyst roles.
+    </p>
   </div>
 </section>
+<div class="service-grid">
+  <div class="service-card">
+    <h3>Dashboard Engineering</h3>
+    <p>KPI dashboards designed for leadership decision-making.</p>
+  </div>
 
-<section class="tech-skills" id="skills">
+  <div class="service-card">
+    <h3>Reporting Automation</h3>
+    <p>Excel VBA, Power BI, MIS & WFM automation.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Business Analytics</h3>
+    <p>Turning data into actionable business insights.</p>
+  </div>
+</div>
+
+
+<!-- SKILLS -->
+<section class="reveal section tech-skills" id="skills">
   <h2 class="tech-title">
     TECHNICAL <span>SKILLS</span>
   </h2>
@@ -181,8 +191,8 @@
   </div>
 </section>
 
-
-<section class="projects-section" id="projects">
+<!-- PROJECTS -->
+<section class=" reveal section projects-section" id="projects">
   <h2 class="skills-title">PROJECTS</h2>
 
   <div class="projects-grid">
@@ -238,74 +248,21 @@
   </div>
 </section>
 
+<section class=" reveal section " id="contact">
+  <div class="container">
+    <div class="cta-card">
+      <h2>I’m actively seeking Data Analyst & BI Analyst roles.</h2>
+      <p>Let’s build something impactful together.</p>
 
-<!-- EXPERIENCE -->
-<section class="experience"id="Experience">
-  <h2>Experience</h2>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>Data Analyst Intern — AIV Pvt. Ltd.</h3>
-      <ul>
-        <li>Automated MIS & WFM dashboards (30% time saved)</li>
-        <li>Built KPI frameworks for ops & finance</li>
-      </ul>
+      <div class="cta-actions">
+        <a href="mailto:naveenravana89@gmail.com" class="btn primary">Email Me</a>
+        <a href="https://www.linkedin.com/in/naveenthammineni" class="btn secondary">LinkedIn</a>
+        <a href="https://github.com/Naveenravana" class="btn secondary">GitHub</a>
+      </div>
     </div>
-
-    <div class="timeline-item">
-      <h3>Data Scientist Intern — SkillVertex</h3>
-      <ul>
-        <li>Churn models with 90%+ accuracy</li>
-        <li>EDA and visualization using Python</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <h3>ServiceNow Admin Intern — SmartInternz</h3>
-      <ul>
-        <li>ITSM workflows & dashboards</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <h3>UI/UX Design Intern — InGage Technologies</h3>
-      <ul>
-        <li>Wireframes & prototypes using Figma</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Networking Intern — Cisco</h3>
-      <ul>
-        <li>Networking fundamentals & simulations</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="education" id = "Education">
-  <h2>Education</h2>
-  <div class="edu-card">
-    <h3>B.E. Computer Science</h3>
-    <p>Anna University, Chennai</p>
-    <span>2021 – 2025</span>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>I’m actively seeking Data Analyst & BI Analyst roles.</h2>
-  <p>Let’s build something impactful together.</p>
-
-  <div class="cta-actions">
-    <a href="mailto:naveenravana89@gmail.com" class="btn primary">Email Me</a>
-    <a href="https://www.linkedin.com/in/naveenthammineni" class="btn secondary">LinkedIn</a>
-    <a href="https://github.com/YOUR_GITHUB_USERNAME" class="btn secondary">GitHub</a>
   </div>
 </section>
 
 <script src="script.js"></script>
 </body>
 </html>
-

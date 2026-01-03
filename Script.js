@@ -1,149 +1,90 @@
-/* =====================================
-   GSAP SETUP
-===================================== */
 gsap.registerPlugin(ScrollTrigger);
 
-/* =====================================
-   HERO ANIMATION (CONFIDENCE INTRO)
-===================================== */
+/* HERO */
 gsap.from(".hero-content > *", {
   opacity: 0,
   y: 30,
   duration: 1,
-  stagger: 0.2,
-  ease: "power3.out"
+  stagger: 0.2
 });
 
-gsap.from(".hero-visual img", {
+/* ABOUT */
+gsap.from(".about-title, .about-card", {
+  scrollTrigger: { trigger: ".about-section", start: "top 70%", once: true },
   opacity: 0,
-  scale: 0.95,
+  y: 30,
   duration: 1,
-  delay: 0.4,
-  ease: "power3.out"
+  stagger: 0.2
 });
 
-/* =====================================
-   ABOUT SECTION (WAVING INTRO FEEL)
-===================================== */
-gsap.from(".about-title", {
-  scrollTrigger: {
-    trigger: ".about-section",
-    start: "top 70%",
-    once: true
-  },
-  opacity: 0,
-  y: 20,
-  duration: 0.8,
-  ease: "power3.out"
-});
-
-gsap.from(".about-card", {
-  scrollTrigger: {
-    trigger: ".about-section",
-    start: "top 70%",
-    once: true
-  },
-  opacity: 0,
-  y: 40,
-  duration: 1,
-  delay: 0.15,
-  ease: "power3.out"
-});
-
-/* =====================================
-   SKILLS SECTION (GROWTH + ARROW)
-===================================== */
+/* SKILLS */
 gsap.to(".growth-arrow", {
-  scrollTrigger: {
-    trigger: ".tech-skills",
-    start: "top 70%",
-    once: true
-  },
+  scrollTrigger: { trigger: ".tech-skills", start: "top 70%", once: true },
   opacity: 1,
   y: -30,
-  duration: 0.8,
-  ease: "power3.out"
+  duration: 0.8
 });
 
 gsap.from(".tech-bar span", {
-  scrollTrigger: {
-    trigger: ".tech-skills",
-    start: "top 70%",
-    once: true
-  },
+  scrollTrigger: { trigger: ".tech-skills", start: "top 70%", once: true },
   width: 0,
   duration: 1.2,
-  stagger: 0.15,
-  ease: "power3.out"
+  stagger: 0.15
 });
 
-gsap.from(".tech-card", {
+/* PROJECTS */
+gsap.from(".project-card", {
+  scrollTrigger: { trigger: ".projects-section", start: "top 75%", once: true },
+  opacity: 0,
+  y: 40,
+  duration: 0.9,
+  stagger: 0.2
+});
+
+gsap.from(".cta-card", {
   scrollTrigger: {
-    trigger: ".tech-skills",
-    start: "top 75%",
+    trigger: ".cta",
+    start: "top 80%",
     once: true
   },
   opacity: 0,
   y: 30,
-  duration: 0.9,
-  stagger: 0.1,
-  ease: "power3.out"
+  duration: 0.8
 });
 
-/* =====================================
-   PROJECTS (CASE STUDY REVEAL)
-===================================== */
-gsap.from(".project-card", {
-  scrollTrigger: {
-    trigger: ".projects-section",
-    start: "top 75%",
-    once: true
-  },
-  opacity: 0,
-  y: 40,
-  duration: 0.9,
-  stagger: 0.2,
-  ease: "power3.out"
+/* ================= GLOBAL SECTION POP-UP ================= */
+
+gsap.utils.toArray(".reveal-section").forEach(section => {
+  gsap.to(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+      once: true
+    },
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    duration: 0.9,
+    ease: "power3.out"
+  });
 });
 
-/* =====================================
-   CTA / CONTACT (DECISION MOMENT)
-===================================== */
-gsap.from(".cta h2", {
-  scrollTrigger: {
-    trigger: ".cta",
-    start: "top 80%",
-    once: true
-  },
-  opacity: 0,
-  y: 20,
-  duration: 0.7,
-  ease: "power3.out"
-});
 
-gsap.from(".cta p", {
-  scrollTrigger: {
-    trigger: ".cta",
-    start: "top 80%",
-    once: true
-  },
-  opacity: 0,
-  y: 20,
-  duration: 0.7,
-  delay: 0.15,
-  ease: "power3.out"
-});
+/* ACTIVE NAV LINK */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-gsap.from(".cta-actions a", {
-  scrollTrigger: {
-    trigger: ".cta",
-    start: "top 80%",
-    once: true
-  },
-  opacity: 0,
-  y: 20,
-  duration: 0.6,
-  stagger: 0.15,
-  delay: 0.3,
-  ease: "power3.out"
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const top = section.offsetTop - 120;
+    if (pageYOffset >= top) current = section.id;
+  });
+
+  navLinks.forEach(link => {
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === `#${current}`
+    );
+  });
 });
